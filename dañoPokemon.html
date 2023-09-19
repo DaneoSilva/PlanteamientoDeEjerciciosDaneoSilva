@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de daño Pokemon</title>
+    <link rel="stylesheet" href="./css/styleEjercicios.css">
+    <script src="./js/ejercicios.js"></script>
+</head>
+<style>
+    body {
+        background-image: url('./img/poke.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+</style>
+
+<body>
+    <section class="partes">
+        <div class="div">
+            <div class="pokemon4">
+                <h1>Calculadora de Daño Pokemon</h1>
+                <label for="tipo1">Tipo 1</label>
+                <select name="tipo1" id="tipo1" onchange="ChangePokemon1()">
+                    <option value="electricidad">Electrico</option>
+                    <option value="fuego">Fuego</option>
+                    <option value="agua">Agua</option>
+                    <option value="hierba">Hierba</option>
+                </select>
+
+                <label for="tipo2">Tipo 2</label>
+                <select name="tipo2" id="tipo2" onchange="ChangePokemon2()">
+                    <option value="electricidad">Electrico</option>
+                    <option value="fuego">Fuego</option>
+                    <option value="agua">Agua</option>
+                    <option value="hierba">Hierba</option>
+                </select>
+                <input type="number" placeholder="Ataque" id="ataque">
+                <input type="number" placeholder="Defensa" id="defensa">
+
+                <button onclick='DañoPokemon()' id="spriteMove" class="botoncentral">Calcular Daño</button>
+                <div class="result">
+                    <h3>resultado...</h3>
+                    <h2 id='result'></h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="divcenter" id="pokemonMove1">
+            <img src="./img/electricidad.png" alt="no hay xd" id="pokemon1" class="espejo">
+        </div>
+        <div class="divcenter" id="pokemonMove2">
+            <img src="./img/electricidad.png" alt="no hay xd" id="pokemon2" class="pokemon2">
+        </div>
+    </section>
+
+    <footer class="pie">
+        <a href="./index.html">Regresar al Menu</a>
+    </footer>
+</body>
+</html>
